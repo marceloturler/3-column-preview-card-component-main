@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+:root {
+  /* PRIMARY COLORS */
+  --BrightOrange: hsl(31, 77%, 52%);
+  --DarkCyan: hsl(184, 100%, 22%);
+  --VeryDarkCyan: hsl(179, 100%, 13%);
+
+  /* NEUTRAL COLORS */
+  --TransparentWhite: hsla(0, 0%, 100%, 0.75);
+  --TransparentWhite2: hsla(250, 0%, 100%, 0.5);
+  --VeryLightGray: hsl(0, 0%, 95%);
+
+  /* TYPOGRAPHY */
+  --FontSize: 15px;
+
+  /* DIMENSIONS LAYOUT */
+  --MobileWidth: 375px;
+  --NotebookWidth: 1440px;
+}
+
+body {
+  max-width: var(--NotebookWidth);
+  height: 100%;
+  background-color: var(--VeryLightGray);
+  padding: 88px 0;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  
+}
+
+.container {
+  margin-top: calc(25% - 250px);
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card {
+  width: 310px;
+  height: 500px;
+  align-items: flex-start;
+  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  padding: 32px 58px 32px 48px;
+}
+
+.card img {
+  width: 66px;
+  margin: 0;
+  padding: 0;
+}
+
+.card h2 {
+  font-size: 2.5rem;
+  font-family: 'Big Shoulders Display', cursive;
+  text-transform: uppercase;
+  color: var(--TransparentWhite);
+}
+
+.card p {
+  color: var(--TransparentWhite2);
+  font-size: .94rem;
+  line-height: 1.57rem;
+}
+
+.card button {
+  width: 148px;
+  border: 2px solid var(--VeryLightGray);
+  border-radius: 22px;
+  padding: 12px 0;
+  background-color: var(--VeryLightGray);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.2rem;
+}
+
+.card:nth-child(1) {
+  background-color: var(--BrightOrange);
+}
+
+.card:nth-child(1) button {
+  color: var(--BrightOrange);
+}
+
+.card:nth-child(2) {
+  background-color: var(--DarkCyan);
+}
+
+.card:nth-child(2) button {
+  color: var(--DarkCyan);
+}
+
+.card:nth-child(3) {
+  background-color: var(--VeryDarkCyan);
+}
+
+.card:nth-child(3) button {
+  color: var(--VeryDarkCyan);
+}
+
+.card button:hover  {
+  border: 2px solid var(--TransparentWhite);
+  background-color:hsla(0, 0%, 100%, 0);
+  color: var(--TransparentWhite);
+}
+
+@media screen and (max-width: 930px) {
+  .container {
+    margin: 0;
+    display: block;
+  }
+
+  .card {
+    width: 328px;
+    height: 443px;
+  }
+}
